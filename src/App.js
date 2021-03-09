@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //Import Styles
-import './styles/app.scss';
+import "./styles/app.scss";
 //Adding Components
 import Player from './components/Player';
 import Song from './components/Song';
@@ -16,14 +16,17 @@ function App() {
   return (
     <div className="App">
         <Song
-        currentSong={ currentSong }
+        currentSong={currentSong}
         />
         <Player
         setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
-        currentSong={ currentSong }
+        currentSong={currentSong}
         />
-        <Library songs={songs} />
+        <Library
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        />
     </div>
   );
 }
